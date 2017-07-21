@@ -1,0 +1,17 @@
+[
+  {
+   "remote"     : "devices",
+   "repository" : "kernel_oneplus_msm8998",
+   "target_path": "kernel/oneplus/msm8998"
+  },
+  {
+   "remote"     : "aosip",
+   "repository" : "device_oppo_common",
+   "target_path": "device/oppo/common"
+  },
+  {
+   "remote"     : "aosip",
+   "repository" : "packages_resources_devicesettings",
+   "target_path": "packages/resources/devicesettings"
+  }
+]
