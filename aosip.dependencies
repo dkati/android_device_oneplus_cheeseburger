@@ -5,6 +5,11 @@
    "target_path": "kernel/oneplus/msm8998"
   },
   {
+   "remote"     : "devices",
+   "repository" : "vendor_oneplus_cheeseburger",
+   "target_path": "vendor/oneplus"
+   },
+  {
    "remote"     : "aosip",
    "repository" : "device_oppo_common",
    "target_path": "device/oppo/common"
