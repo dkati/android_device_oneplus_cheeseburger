@@ -210,12 +210,6 @@ on boot
     chown system system /sys/class/timed_output/vibrator/wf_rep
     chown system system /sys/class/timed_output/vibrator/wf_s_rep
 
-#fingerprint service
-service fingerprintd /system/bin/fingerprintd
-    class late_start
-    user system
-    group system
-
 service qvop-daemon /system/bin/qvop-daemon
     class late_start
     user system
