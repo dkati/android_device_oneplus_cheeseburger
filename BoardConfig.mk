@@ -92,6 +92,9 @@ BOARD_ANT_WIRELESS_DEVICE := "qualcomm-uart"
 USE_DEVICE_SPECIFIC_AUDIO := true
 DEVICE_SPECIFIC_AUDIO_PATH := $(PLATFORM_PATH)/audio
 
+# Enable sensor multi HAL
+USE_SENSOR_MULTI_HAL := true
+
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(PLATFORM_PATH)/bluetooth
 BOARD_HAVE_BLUETOOTH := true
@@ -189,9 +192,6 @@ PROTOBUF_SUPPORTED := true
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy
-
-# Sensors
-USE_SENSOR_MULTI_HAL := true
 
 # Timeservice
 BOARD_USES_QC_TIME_SERVICES := true

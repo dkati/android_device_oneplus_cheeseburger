@@ -116,7 +116,10 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    Snap
+    Snap \
+    camera.device@1.0-impl \
+    camera.device@3.2-impl \
+    android.hardware.camera.provider@2.4-impl \
 
 # Connectivity Engine support (CNE)
 PRODUCT_PACKAGES += \
@@ -131,7 +134,29 @@ PRODUCT_PACKAGES += \
     hwcomposer.msm8998 \
     memtrack.msm8998 \
     liboverlay \
-    libtinyxml
+    libtinyxml \
+    android.hardware.graphics.allocator@2.0-impl \
+    android.hardware.graphics.allocator@2.0-service \
+    android.hardware.graphics.mapper@2.0-impl \
+    android.hardware.memtrack@1.0-impl \
+    android.hardware.graphics.composer@2.1-impl
+
+# TV
+PRODUCT_PACKAGES += \
+    android.hardware.tv.input@1.0-impl \
+    android.hardware.tv.input@1.0-service \
+    android.hardware.tv.cec@1.0-impl
+
+PRODUCT_PACKAGES += \
+    tv_input.default
+
+# new gatekeeper HAL
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0-impl
+
+# Keymaster HAL
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@3.0-impl
 
 # Fingerprint sensor
 PRODUCT_PACKAGES += \
@@ -186,6 +211,35 @@ PRODUCT_COPY_FILES += \
 # Lights
 PRODUCT_PACKAGES += \
     lights.msm8998
+    android.hardware.light@2.0-impl
+
+# GNSS HAL
+PRODUCT_PACKAGES += \
+   android.hardware.gnss@1.0-impl
+
+# Health
+PRODUCT_PACKAGES += \
+   android.hardware.health@1.0-impl
+
+# USB HAL
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.0-service
+
+# Vibrator
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator@1.0-impl
+
+# HIDL
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/manifest.xml:system/vendor/manifest.xml
+
+# Default OMX service to non-Treble
+PRODUCT_PROPERTY_OVERRIDES += \
+   persist.media.treble_omx=false
+
+# RenderScript HAL
+PRODUCT_PACKAGES += \
+   android.hardware.renderscript@1.0-impl
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -216,13 +270,22 @@ PRODUCT_PACKAGES += \
     libc2dcolorconvert \
     libextmedia_jni \
     libOmxAacEnc \
-    libOmxAmrEnc \
     libOmxCore \
-    libOmxEvrcEnc \
-    libOmxQcelp13Enc \
     libOmxVdec \
     libOmxVenc \
     libstagefrighthw
+    android.hardware.audio@2.0-impl \
+    android.hardware.audio.effect@2.0-impl \
+    android.hardware.soundtrigger@2.0-impl
+
+# DRM
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.0-impl
+
+# Bluetooth HAL
+PRODUCT_PACKAGES += \
+    libbt-vendor \
+     android.hardware.bluetooth@1.0-impl
 
 # Power
 PRODUCT_PACKAGES += \
@@ -271,6 +334,7 @@ PRODUCT_PACKAGES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
+    android.hardware.sensors@1.0-impl \
     sensors.msm8998
 
 # Vehicle network (for slim_daemon)
@@ -297,7 +361,10 @@ PRODUCT_PACKAGES += \
     dhcpcd.conf \
     wpa_supplicant \
     wificond  \
-    wpa_supplicant.conf
+    wpa_supplicant.conf \
+    wlutil \
+    wifilogd \
+    android.hardware.wifi@1.0-service \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/hostapd_default.conf:system/etc/hostapd/hostapd_default.conf \
