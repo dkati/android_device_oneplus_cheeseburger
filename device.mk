@@ -210,7 +210,7 @@ PRODUCT_COPY_FILES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    lights.msm8998
+    lights.msm8998 \
     android.hardware.light@2.0-impl
 
 # GNSS HAL
@@ -273,7 +273,7 @@ PRODUCT_PACKAGES += \
     libOmxCore \
     libOmxVdec \
     libOmxVenc \
-    libstagefrighthw
+    libstagefrighthw \
     android.hardware.audio@2.0-impl \
     android.hardware.audio.effect@2.0-impl \
     android.hardware.soundtrigger@2.0-impl
